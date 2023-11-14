@@ -49,7 +49,7 @@ fun DetailScreen(
     DetailScreen(
         modifier = modifier,
         isUpdatingNote = state.isUpdatingNote,
-        isFormNotBlank = state.isUpdatingNote,
+        isFormNotBlank = viewModel.isFormNotBlank,
         title = state.title,
         content = state.content,
         isBookMark = state.isBookmark,
@@ -187,6 +187,7 @@ private fun NotesTextField(
             containerColor = Color.Transparent,
             focusedBorderColor = Color.Transparent,
             focusedLabelColor = Color.Transparent,
+            unfocusedLabelColor = Color.Transparent,
             unfocusedLeadingIconColor = Color.Transparent
         ),
         placeholder = {
